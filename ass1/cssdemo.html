@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Demo</title>
+
+  <!-- Embedded CSS -->
+  <style>
+    body {
+      background-color: lightpink;
+    }
+    div {
+      color: blue;
+      border: 4px solid blue;
+      box-shadow: 2px 3px 10px gray;
+      padding: 10px;
+    }
+  </style>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="externalstyles.css">
+</head>
+
+<body>
+
+  <div>
+    <p>This paragraph inherits text color from div.</p>
+    <p style="color: darkgreen;">This paragraph uses inline CSS.</p>
+  </div>
+
+</body>
+</html>

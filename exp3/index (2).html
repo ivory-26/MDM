@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+        function addTask() {
+            const input = document.getElementById('task-input');
+            const taskText = input.value;
+
+            if (taskText.trim() === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            const list = document.getElementById('task-list');
+
+            const taskRow = document.createElement('div');
+            taskRow.className = 'task-list-row';
+
+            taskRow.innerHTML = `
+                    <div class="task-element">
+                        <p>${taskText}</p>
+                    </div>
+                    <div class="task-buttons">
+                        <button class="remove-task-button" onclick="this.parentElement.parentElement.remove()">Remove</button>
+                        <button class="mark-as-completed-button" onclick="this.innerHTML = 'Task completed'">
+                        Mark as completed
+                        </button>                    
+                    </div>
+                    `;
+
+            list.appendChild(taskRow);
+            input.value = "";
+        }
+    </script>
+
+    <h1>To-Do List</h1>
+    <div class="list-input-section">
+        <div class="input-text">
+            <input type="text" id="task-input">
+        </div>
+        <div class="list-buttons">
+            <button class="add-task-button" onClick="addTask()">
+                Add
+            </button>
+        </div>
+    </div>
+
+    <div class="list-display-section" id="task-list">
+       
+    </div>
+</body>
+
+</html>

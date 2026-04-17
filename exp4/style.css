@@ -1,0 +1,28 @@
+/* Basic styling overriding Bootstrap defaults for a simple look */
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    background-color: #f8f9fa; /* Consistent light background */
+}
+
+/* Adjust the main card to look plain */
+#target-box {
+    border: 1px solid #dee2e6;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Make header simpler */
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Ensure controls are spaced out but not fancy */
+.card-body {
+    padding: 1.5rem;
+}
+
+button {
+    margin-top: 10px;
+}

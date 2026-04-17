@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App - Real-time Data</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3 class="mb-0">Weather Forecast</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" id="cityInput" class="form-control" placeholder="Enter city name..." aria-label="City name">
+                            <button class="btn btn-primary" type="button" id="getWeatherBtn">Search</button>
+                        </div>
+
+                        <div id="loader" class="text-center d-none">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+
+                        <div id="weatherResult" class="d-none">
+                            <hr>
+                            <div class="text-center mb-4">
+                                <h2 id="displayCity" class="fw-bold text-uppercase">City Name</h2>
+                                <h1 id="displayTemp" class="display-1 fw-bold">25°C</h1>
+                                <p id="displayCondition" class="lead text-muted">Cloudy</p>
+                            </div>
+                            
+                            <div class="row text-center mt-4">
+                                <div class="col-6">
+                                    <div class="p-3 border rounded bg-white">
+                                        <h6 class="text-muted">Humidity</h6>
+                                        <h4 id="displayHumidity">60%</h4>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="p-3 border rounded bg-white">
+                                        <h6 class="text-muted">Wind Speed</h6>
+                                        <h4 id="displayWind">12 km/h</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="errorMessage" class="alert alert-danger d-none mt-3" role="alert">
+                            City not found. Please try again.
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-muted mt-4 small">Data provided by AccuWeather API</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

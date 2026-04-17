@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Simple Calculator</title>
+</head>
+
+<body>
+  <h1>Simple JavaScript Calculator</h1>
+
+  <label for="num1">Number 1: </label>
+  <input type="number" id="num1"><br><br>
+
+  <label for="num2">Number 2: </label>
+  <input type="number" id="num2"><br><br>
+
+  <button onclick="calculate()">Calculate Results</button>
+
+  <p id="sumResult"></p>
+  <p id="diffResult"></p>
+  <p id="prodResult"></p>
+
+  <script>
+    function getSum(a, b) {
+      return a + b
+    }
+
+    function getDifference(a, b) {
+      return a - b
+    }
+
+    function getProduct(a, b) {
+      return a * b
+    }
+
+    function calculate() {
+      const n1 = parseFloat(document.getElementById("num1").value)
+      const n2 = parseFloat(document.getElementById("num2").value)
+
+      if (isNaN(n1) || isNaN(n2)) {
+        alert("Please enter both numbers correctly.")
+        return
+      }
+
+      document.getElementById("sumResult").innerText = "Sum: " + getSum(n1, n2)
+      document.getElementById("diffResult").innerText = "Difference: " + getDifference(n1, n2)
+      document.getElementById("prodResult").innerText = "Product: " + getProduct(n1, n2)
+    }
+  </script>
+</body>
+
+</html>

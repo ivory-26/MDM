@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Fade Toggle</title>
+    <!-- Simple jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>jQuery Fade Toggle Example</h1>
+
+    <div id="targetDiv">
+        <p>This is some text inside a div that will fade in and out.</p>
+    </div>
+
+    <button id="toggleBtn">Fade Out / In</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#toggleBtn").click(function() {
+                // fadeToggle handles both fading out and back in
+                $("#targetDiv").fadeToggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>
